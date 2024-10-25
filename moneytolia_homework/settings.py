@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-1pwz0_czbn*h%qiny&s(y9c^3t@$bw!!=4bflv^6)f=y&)@w@&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["127.0.0.1", "localhost", "0.0.0.0"]
 
 
 # Application definition
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'moneytolia_homework'
 ]
 
 MIDDLEWARE = [
