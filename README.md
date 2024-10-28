@@ -11,11 +11,11 @@
 4. SQlite
 
 ## Project Content
-- There is an API to create an account.
-- There is an API that creates an API key with the ID returned from the account.
-- There is an API that can make requests with an API key and shorten the URL.
-- There is an API that returns the original shortened url.
-- There is an API that keeps the number of short urls created.
+- Accounts can be created via a dedicated API.
+- After creating an account, an API is available to generate an API key using the account ID.
+- Authorized users can shorten URLs through an API that accepts their API key.
+- A separate API retrieves the original URL from a given shortened URL.
+- The service also provides an API that tracks the total number of URLs shortened.
 
 ## API Endpoints
 ### Create Account
@@ -37,8 +37,8 @@
 }
 ```
 ### Create API Key
-URL: /api/accounts/create-api-key
-METHOD: POST
+- URL: /api/accounts/create-api-key
+- METHOD: POST
 #### Request Body
 ```bash
 {
@@ -53,8 +53,8 @@ METHOD: POST
 }
 ```
 ### Shorten URL
-URL: /api/control/shorten-url
-METHOD: POST
+- URL: /api/control/shorten-url
+- METHOD: POST
 #### Request Headers
 ```bash
 {
@@ -75,8 +75,8 @@ METHOD: POST
 }
 ```
 ### Original URL
-URL: /api/control/original-url/?short_url=660328
-METHOD: GET
+- URL: /api/control/original-url/?short_url=660328
+- METHOD: GET
 #### Request Headers
 ```bash
 {
@@ -96,8 +96,8 @@ METHOD: GET
 }
 ```
 #### Analytics
-URL: /api/control/analytics
-METHOD: GET
+- URL: /api/control/analytics
+- METHOD: GET
 #### Request Headers
 ```bash
 {
