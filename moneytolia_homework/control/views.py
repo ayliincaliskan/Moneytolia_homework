@@ -19,8 +19,7 @@ class ShortenUrl(generics.GenericAPIView):
         data = json.loads(request.body)
         url_request = data.get('url_request')
         api_key = request.headers.get('Api-Key')
-        print(url_request)
-        print(api_key)
+
         try:
             api_key_obj = APIKey.objects.get(key=api_key)
             user = api_key_obj.user

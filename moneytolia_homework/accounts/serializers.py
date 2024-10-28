@@ -5,6 +5,11 @@ from moneytolia_homework.accounts.models import APIKey
 import random
 import string
 
+
+def generate_api_key():
+    return "".join(random.choices(string.ascii_letters + string.digits, k=30))
+
+
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
@@ -13,9 +18,6 @@ class UserSerializer(serializers.ModelSerializer):
     def create(self, validated_data):
         user = User.objects.create_user(**validated_data)
         return user
-
-def generate_api_key():
-    return "".join(random.choices(string.ascii_letters + string.digits, k=30))
 
 
 class ApiKeySerializer(serializers.ModelSerializer):
