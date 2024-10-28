@@ -37,7 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'moneytolia_homework'
+    'rest_framework',
+    'moneytolia_homework',
+    'moneytolia_homework.accounts',
+    'moneytolia_homework.control'
 ]
 
 MIDDLEWARE = [
@@ -48,6 +51,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'moneytolia_homework.accounts.middleware.APIKeyMiddleware'
 ]
 
 ROOT_URLCONF = 'moneytolia_homework.urls'
@@ -122,3 +126,5 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+REDIS_EXPIRATION_TIME = 60 * 60 * 24 * 7
