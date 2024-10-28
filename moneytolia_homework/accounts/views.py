@@ -8,5 +8,3 @@ class UserCreateView(generics.CreateAPIView):
 
 class ApiKeyCreateView(generics.CreateAPIView):
     serializer_class = ApiKeySerializer
-
-    

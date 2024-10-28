@@ -2,12 +2,7 @@ from rest_framework import serializers
 from django.contrib.auth.models import User
 
 from moneytolia_homework.accounts.models import APIKey
-import random
-import string
-
-
-def generate_api_key():
-    return "".join(random.choices(string.ascii_letters + string.digits, k=30))
+from moneytolia_homework.accounts.utils import generate_api_key
 
 
 class UserSerializer(serializers.ModelSerializer):

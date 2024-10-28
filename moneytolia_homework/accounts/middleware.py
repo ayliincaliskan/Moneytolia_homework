@@ -8,6 +8,7 @@ class APIKeyMiddleware:
 
     def __call__(self, request):
         api_key = request.headers.get('Api-Key')
+        # The check was passed because there is no API key yet.
         if request.path == '/api/accounts/create-user/' and request.method == 'POST':
             return self.get_response(request)
         if request.path == '/api/accounts/create-api-key/' and request.method == 'POST':
