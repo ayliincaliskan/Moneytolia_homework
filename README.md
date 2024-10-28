@@ -5,8 +5,8 @@
 2. From the repo's root run: `source tools/docker-development.sh`.
 
 ## Technologies Used
-1. Docker
-2. Django
+1. Django
+2. Docker
 3. Redis
 4. SQlite
 
@@ -33,7 +33,7 @@
 {
     "id": 1,
     "username": "exampleuser",
-    "password": "pbkdf2_sha256$600000$l9aFpR77NoWUxcvYf5o1be$4V06PNfXGrRFBj791XZSe04YBdk8Yc8fk7DzEwaIgWw="
+    "password": "your-password-here"
 }
 ```
 ### Create API Key
@@ -49,7 +49,7 @@
 ```bash
 {
     "user": 1,
-    "key": "95n4b6uBaQcaQWPPhcrFdbSi6Wjtl5"
+    "key": "your-api-key-here"
 }
 ```
 ### Shorten URL
@@ -58,7 +58,7 @@
 #### Request Headers
 ```bash
 {
-    Api-Key: "95n4b6uBaQcaQWPPhcrFdbSi6Wjtl5"
+    Api-Key: "your-api-key-here"
 }
 ```
 #### Request Body
@@ -75,12 +75,12 @@
 }
 ```
 ### Original URL
-- URL: /api/control/original-url/?short_url=660328
+- URL: /api/control/original-url
 - METHOD: GET
 #### Request Headers
 ```bash
 {
-    Api-Key: "95n4b6uBaQcaQWPPhcrFdbSi6Wjtl5"
+    Api-Key: "your-api-key-here"
 }
 ```
 #### Request Params
@@ -101,7 +101,7 @@
 #### Request Headers
 ```bash
 {
-    Api-Key: "95n4b6uBaQcaQWPPhcrFdbSi6Wjtl5"
+    Api-Key: "your-api-key-here"
 }
 ```
 #### Response
